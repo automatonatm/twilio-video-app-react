@@ -42,29 +42,31 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
   const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
-
+  /*
   const handleRoomNameChange = (event: ChangeEvent<HTMLInputElement>) => {
     setRoomName(event.target.value);
-  };
+  };*/
+
+  setRoomName('NiMEDix');
 
   const hasUsername = !window.location.search.includes('customIdentity=true') && user?.displayName;
 
   return (
     <>
       <Typography variant="h5" className={classes.gutterBottom}>
-        Join a Room
+        ENTER 342512 AND CONTINUE
       </Typography>
       <Typography variant="body1">
-        {hasUsername
+        {/*{hasUsername
           ? "Enter the name of a room you'd like to join."
-          : "Enter your name and the name of a room you'd like to join"}
+          : "Enter your name and the name of a room you'd like to join"}*/}
       </Typography>
       <form onSubmit={handleSubmit}>
         <div className={classes.inputContainer}>
           {!hasUsername && (
             <div className={classes.textFieldContainer}>
               <InputLabel shrink htmlFor="input-user-name">
-                Your Name
+                PASS CODE
               </InputLabel>
               <TextField
                 id="input-user-name"
@@ -76,9 +78,9 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
               />
             </div>
           )}
-          <div className={classes.textFieldContainer}>
+          <div className={classes.textFieldContainer} style={{ display: 'none' }}>
             <InputLabel shrink htmlFor="input-room-name">
-              Room Name
+              AUTH CODE
             </InputLabel>
             <TextField
               autoCapitalize="false"
@@ -87,7 +89,6 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
               fullWidth
               size="small"
               value={roomName}
-              onChange={handleRoomNameChange}
             />
           </div>
         </div>

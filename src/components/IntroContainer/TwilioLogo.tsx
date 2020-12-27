@@ -1,4 +1,6 @@
 import React, { SVGProps } from 'react';
+import Logo from '.logo.png';
+//
 
 export default function TwilioLogo(props: SVGProps<SVGSVGElement>) {
   return (

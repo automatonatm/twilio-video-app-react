@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   innerContainer: {
     display: 'flex',
     width: '888px',
+    background: 'green',
     height: '379px',
     borderRadius: '8px',
     boxShadow: '0px 2px 4px 0px rgba(40, 42, 43, 0.3)',
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: Swoosh,
+    background: 'green',
     backgroundSize: 'cover',
     width: '296px',
     [theme.breakpoints.down('sm')]: {
@@ -89,6 +90,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   subContentContainer: {
     position: 'absolute',
+    background: '#11ef72', //
     marginTop: '1em',
     width: '100%',
   },
@@ -106,7 +108,7 @@ const IntroContainer = (props: IntroContainerProps) => {
 
   return (
     <div className={classes.background}>
-      <TwilioLogo className={classes.twilioLogo} />
+      {/*<TwilioLogo className={classes.twilioLogo} />*/}
       {user && location.pathname !== '/login' && <UserMenu />}
       <div className={classes.container}>
         <div className={classes.innerContainer}>
@@ -114,7 +116,7 @@ const IntroContainer = (props: IntroContainerProps) => {
             <div className={classes.logoContainer}>
               <VideoLogo />
               <Typography variant="h6" className={classes.title}>
-                Twilio Programmable Video
+                NiMEDix
               </Typography>
             </div>
           </div>
